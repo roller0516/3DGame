@@ -40,7 +40,7 @@ public class NetWorkManager : MonoBehaviourPunCallbacks
     }
     public void Spawn() 
     {
-        PhotonNetwork.Instantiate("Player", Vector3.zero, Quaternion.identity);
+        PhotonNetwork.Instantiate("Player 1", Vector3.zero, Quaternion.identity);
         respawnPanel.SetActive(false);
 
     }

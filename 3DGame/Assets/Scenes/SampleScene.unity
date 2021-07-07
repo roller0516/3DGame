@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.4012104, g: 0.44606626, b: 0.5283019, a: 1}
+  m_AmbientSkyColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
@@ -32,13 +32,13 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: dd2b0f0b5a894ff47bc2db2411d56d87, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: a2d599020c9e6ea4dac18685420bcc2e, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -347,9 +347,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1242852942509270, guid: e87064539d6b5414eba4d070c8142405, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1463355169928304, guid: e87064539d6b5414eba4d070c8142405, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1878418637535970, guid: e87064539d6b5414eba4d070c8142405, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_03_Model_3_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878418637535970, guid: e87064539d6b5414eba4d070c8142405, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4208935289275272, guid: e87064539d6b5414eba4d070c8142405, type: 3}
       propertyPath: m_RootOrder
@@ -404,9 +416,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1063786552504560, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297868016385490, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_1_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4907083288698050, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_RootOrder
@@ -461,9 +485,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690760117}
     m_Modifications:
+    - target: {fileID: 1063786552504560, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297868016385490, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_1_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4907083288698050, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_RootOrder
@@ -607,7 +643,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 64
   m_IsActive: 1
 --- !u!64 &278378484
 MeshCollider:
@@ -679,8 +715,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 278378483}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3, y: -10, z: -408.55942}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -6.426361, y: -12.18277, z: -426.56622}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 1804112637}
@@ -692,8 +728,8 @@ Transform:
   - {fileID: 823238979}
   - {fileID: 298608059}
   - {fileID: 1312954053}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2009445744}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &295235017 stripped
 Transform:
@@ -842,6 +878,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -915,6 +963,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -1047,9 +1107,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 278378487}
     m_Modifications:
+    - target: {fileID: 1000011891983424, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013810312552, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
       propertyPath: m_Name
       value: Rock_set_01_Model_2_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013810312552, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014116550496, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4000013945556330, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
       propertyPath: m_RootOrder
@@ -1119,6 +1191,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -1198,6 +1282,18 @@ PrefabInstance:
     - target: {fileID: 1054517177158778, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_03_Model_4_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1054517177158778, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088188974305816, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453900558264446, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4110434996324780, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
       propertyPath: m_RootOrder
@@ -1541,9 +1637,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 278378487}
     m_Modifications:
+    - target: {fileID: 1063786552504560, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297868016385490, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_1_Snow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4907083288698050, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_RootOrder
@@ -1608,7 +1716,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 64
   m_IsActive: 1
 --- !u!64 &690760114
 MeshCollider:
@@ -1680,8 +1788,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690760113}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -10, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.426361, y: -12.18277, z: -18.00679}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 734119594}
@@ -1694,8 +1802,8 @@ Transform:
   - {fileID: 453737281}
   - {fileID: 1673891151}
   - {fileID: 1824450841}
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_Father: {fileID: 2009445744}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &707954735
 PrefabInstance:
@@ -1707,6 +1815,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -1782,6 +1902,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow
       objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1852,9 +1984,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1108779258993130, guid: 4d502caa6084ca44980917748d706280, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338524029660550, guid: 4d502caa6084ca44980917748d706280, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1411963104036972, guid: 4d502caa6084ca44980917748d706280, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_03_Model_2_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411963104036972, guid: 4d502caa6084ca44980917748d706280, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4020369207378014, guid: 4d502caa6084ca44980917748d706280, type: 3}
       propertyPath: m_RootOrder
@@ -1994,67 +2138,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
   m_PrefabInstance: {fileID: 1255321167}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &878699973
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5094040293141262442, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: sceneViewId
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6152933509047788683, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
 --- !u!1 &885945954
 GameObject:
   m_ObjectHideFlags: 0
@@ -2142,6 +2225,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2200,99 +2295,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
---- !u!1 &931342724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 931342725}
-  - component: {fileID: 931342726}
-  m_Layer: 0
-  m_Name: Spot Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &931342725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931342724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1627813009}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &931342726
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931342724}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 0
-  m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 15.624165
-  m_SpotAngle: 37.589775
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1001 &950212885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2300,9 +2302,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1141631477929600, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469952089700596, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1742152796551412, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_3_Snow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742152796551412, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4532334897225108, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
       propertyPath: m_RootOrder
@@ -2398,8 +2412,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2492,9 +2506,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 278378487}
     m_Modifications:
+    - target: {fileID: 1036907435219744, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1208772810332790, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_03_Model_1_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208772810332790, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306493679608180, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4572956522263506, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
       propertyPath: m_RootOrder
@@ -2549,9 +2575,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1141631477929600, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1469952089700596, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1742152796551412, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_3_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742152796551412, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4532334897225108, guid: 19551090edef20c408a0d8bbe0124d6c, type: 3}
       propertyPath: m_RootOrder
@@ -2627,6 +2665,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Set_03_Model_4_Snow
       objectReference: {fileID: 0}
+    - target: {fileID: 1054517177158778, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1088188974305816, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1453900558264446, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4110434996324780, guid: 5a7eb5ea7333d1941a3334e43a9f8a07, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -2683,6 +2733,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -2749,9 +2811,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690760117}
     m_Modifications:
+    - target: {fileID: 1036907435219744, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1208772810332790, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_03_Model_1_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208772810332790, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1306493679608180, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4572956522263506, guid: 32aba314c5ac6d74ab828c34db1a32f1, type: 3}
       propertyPath: m_RootOrder
@@ -2814,6 +2888,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -2888,6 +2974,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -2964,7 +3062,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 64
   m_IsActive: 1
 --- !u!64 &1255380258
 MeshCollider:
@@ -3036,8 +3134,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255380257}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 395, y: -10, z: -409}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 391.57364, y: -12.18277, z: -427.00677}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 1402080476}
@@ -3049,8 +3147,8 @@ Transform:
   - {fileID: 523407321}
   - {fileID: 1365373318}
   - {fileID: 1976717638}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 2009445744}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &1312954053 stripped
 Transform:
@@ -3084,9 +3182,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690760117}
     m_Modifications:
+    - target: {fileID: 1063786552504560, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297868016385490, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_1_Snow (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4907083288698050, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_RootOrder
@@ -3144,6 +3254,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -3203,11 +3325,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
---- !u!4 &1627813009 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6152933509047773951, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
-  m_PrefabInstance: {fileID: 878699973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1658640372
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3215,9 +3332,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 690760117}
     m_Modifications:
+    - target: {fileID: 1000011891983424, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013810312552, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
       propertyPath: m_Name
       value: Rock_set_01_Model_2_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013810312552, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014116550496, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4000013945556330, guid: eb78c2cd4452fd7458928a5aa3d58601, type: 3}
       propertyPath: m_RootOrder
@@ -3298,6 +3427,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocks_Set_02_Model_5_Snow
       objectReference: {fileID: 0}
+    - target: {fileID: 1139684405032050, guid: dcee145a5486dd241bb4b7b17019b17a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522192618729052, guid: dcee145a5486dd241bb4b7b17019b17a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1894508321887476, guid: dcee145a5486dd241bb4b7b17019b17a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 4507757980178126, guid: dcee145a5486dd241bb4b7b17019b17a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3373,7 +3514,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 64
   m_IsActive: 1
 --- !u!64 &1784301295
 MeshCollider:
@@ -3446,11 +3587,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784301294}
   m_LocalRotation: {x: -0, y: 0.7062779, z: -0, w: 0.7079347}
-  m_LocalPosition: {x: 395, y: -10, z: 2}
+  m_LocalPosition: {x: 391.57364, y: -12.18277, z: -16.00679}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 2009445744}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 89.866, z: 0}
 --- !u!4 &1804112637 stripped
 Transform:
@@ -3474,9 +3615,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 278378487}
     m_Modifications:
+    - target: {fileID: 1063786552504560, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1297868016385490, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_1_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1909355284035892, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4907083288698050, guid: 3d54bc1f51634554987432a22ecf6539, type: 3}
       propertyPath: m_RootOrder
@@ -3625,6 +3778,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &2009445743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009445744}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 64
+  m_IsActive: 1
+--- !u!4 &2009445744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009445743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.426361, y: 2.1827698, z: 18.00679}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1255380261}
+  - {fileID: 278378487}
+  - {fileID: 690760117}
+  - {fileID: 1784301298}
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2017997482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3635,6 +3822,18 @@ PrefabInstance:
     - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_4_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007661473716814, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682678163642522, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863579180700312, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4483227858007330, guid: 3374af9a7474e254b92ebb32172c62c9, type: 3}
       propertyPath: m_RootOrder
@@ -3697,9 +3896,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255380261}
     m_Modifications:
+    - target: {fileID: 1703739858494544, guid: 5f9203df1af335d448938193d60c9980, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 1911669151158602, guid: 5f9203df1af335d448938193d60c9980, type: 3}
       propertyPath: m_Name
       value: Rocks_Set_04_Model_2_Snow
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911669151158602, guid: 5f9203df1af335d448938193d60c9980, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 1924489584796898, guid: 5f9203df1af335d448938193d60c9980, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 64
       objectReference: {fileID: 0}
     - target: {fileID: 4708187505166160, guid: 5f9203df1af335d448938193d60c9980, type: 3}
       propertyPath: m_RootOrder

@@ -9,7 +9,6 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
-    public GameObject TEST;
     public Animator ani;
     public PhotonView PV;
     public TextMeshProUGUI nickName;
@@ -37,13 +36,9 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
-            Vector3 LevelUp = Camera.main.WorldToScreenPoint(transform.position);
-        }
-
         if (PV.IsMine)
         {
+
             float axisX = Input.GetAxis("Horizontal");
             float axisZ = Input.GetAxis("Vertical");
 
@@ -52,7 +47,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
                 moveDirection.y += gravity * Time.deltaTime;
             }
 
-            moveDirection = new Vector3(axisX,moveDirection.y, axisZ);
+            moveDirection = new Vector3(axisX * Time.deltaTime * Speed, moveDirection.y, axisZ * Time.deltaTime * Speed);
 
             characterController.Move(moveDirection);
 

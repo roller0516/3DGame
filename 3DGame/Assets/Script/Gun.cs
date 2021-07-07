@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
 
-public class Gun : MonoBehaviour
+public class Gun : MonoBehaviourPunCallbacks, IPunObservable
 {
     public enum State {Ready,Empty,Reloading }
     public State state { get; protected set; }
@@ -49,8 +51,17 @@ public class Gun : MonoBehaviour
             Shot();
         }
     }
-    // Update is called once per frame
     private void Shot() 
+    {
+        photonView.RPC("ShotProcessOnServer", RpcTarget.AllBuffered);
+        magAmmo--;
+
+        if (magAmmo <= 0)
+            state = State.Empty;
+    }
+    // Update is called once per frame
+    [PunRPC]
+    private void ShotProcessOnServer() 
     {
         RaycastHit hit;
 
@@ -72,10 +83,7 @@ public class Gun : MonoBehaviour
         }
         StartCoroutine(ShotEffect(hitPostion));
 
-        magAmmo--;
-
-        if (magAmmo <= 0)
-            state = State.Empty;
+        
     }
     private IEnumerator ShotEffect(Vector3 hitPosition) 
     {
@@ -115,5 +123,21 @@ public class Gun : MonoBehaviour
         ammoRemain -= ammoToFill;
 
         state = State.Ready;
+    }
+
+    public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(ammoRemain);
+            stream.SendNext(magAmmo);
+            stream.SendNext(state);
+        }
+        else 
+        {
+            ammoRemain = (int)stream.ReceiveNext();
+            magAmmo = (int)stream.ReceiveNext();
+            state = (State)stream.ReceiveNext();
+        }
     }
 }
