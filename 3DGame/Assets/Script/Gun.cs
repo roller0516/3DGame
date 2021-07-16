@@ -10,9 +10,10 @@ public class Gun : MonoBehaviourPunCallbacks, IPunObservable
     public State state { get; protected set; }
 
     public Transform fireTransform;
-    public ParticleSystem muzzleFlashEffect;
+    //public ParticleSystem muzzleFlashEffect;
+    public ParticleSystem shotEffect;
 
-    private LineRenderer bulletLineRenderer;
+    //private LineRenderer bulletLineRenderer;
 
     public float damage = 20;
     private float fireDitance = 50;
@@ -27,11 +28,11 @@ public class Gun : MonoBehaviourPunCallbacks, IPunObservable
 
     private void Awake()
     {
-        bulletLineRenderer = GetComponent<LineRenderer>();
-
-        bulletLineRenderer.positionCount = 2;
-
-        bulletLineRenderer.enabled = false;
+        //bulletLineRenderer = GetComponent<LineRenderer>();
+        //
+        //bulletLineRenderer.positionCount = 2;
+        //
+        //bulletLineRenderer.enabled = false;
     }
     private void OnEnable()
     {
@@ -53,52 +54,57 @@ public class Gun : MonoBehaviourPunCallbacks, IPunObservable
     }
     private void Shot() 
     {
-        photonView.RPC("ShotProcessOnServer", RpcTarget.AllBuffered);
+        ShotProcessOnServer();
+        //photonView.RPC("ShotProcessOnServer", RpcTarget.AllBuffered);
         magAmmo--;
 
         if (magAmmo <= 0)
             state = State.Empty;
     }
     // Update is called once per frame
-    [PunRPC]
+    //[PunRPC]
     private void ShotProcessOnServer() 
     {
-        RaycastHit hit;
+        Instantiate(shotEffect, fireTransform.position, fireTransform.rotation);
 
-        Vector3 hitPostion = Vector3.zero;
+        //shotEffect.Emit(1);
+        //shotEffect.transform.position = fireTransform.position;
+        //shotEffect.transform.rotation = fireTransform.rotation; 
+        //RaycastHit hit;
+        //
+        //Vector3 hitPostion = Vector3.zero;
 
-        if (Physics.Raycast(fireTransform.position, fireTransform.forward, out hit, fireDitance))
-        {
-            IDamageable target = hit.collider.GetComponent<IDamageable>();
-
-            if (target != null)
-            {
-                target.OnDamage(damage, hit.point, hit.normal);
-            }
-            hitPostion = hit.point;
-        }
-        else
-        {
-            hitPostion = fireTransform.position + fireTransform.forward * fireDitance;
-        }
-        StartCoroutine(ShotEffect(hitPostion));
-
-        
+        //if (Physics.Raycast(fireTransform.position, fireTransform.forward, out hit, fireDitance))
+        //{
+        //    IDamageable target = hit.collider.GetComponent<IDamageable>();
+        //
+        //    if (target != null)
+        //    {
+        //        target.OnDamage(damage, hit.point, hit.normal);
+        //    }
+        //    hitPostion = hit.point;
+        //}
+        //else
+        //{
+        //    hitPostion = fireTransform.position + fireTransform.forward * fireDitance;
+        //}
+        //StartCoroutine(ShotEffect(hitPostion));
     }
     private IEnumerator ShotEffect(Vector3 hitPosition) 
     {
 
         //muzzleFlashEffect.Play();
 
-        bulletLineRenderer.SetPosition(0, fireTransform.position);
-
-        bulletLineRenderer.SetPosition(1, hitPosition);
-
-        bulletLineRenderer.enabled = true;
+        //shotEffect.Play();
+        //bulletLineRenderer.SetPosition(0, fireTransform.position);
+        //
+        //bulletLineRenderer.SetPosition(1, hitPosition);
+        //
+        //bulletLineRenderer.enabled = true;
 
         yield return new WaitForSeconds(0.03f);
 
-        bulletLineRenderer.enabled = false;
+        //bulletLineRenderer.enabled = false;
     }
     public bool Reload() 
     {
@@ -140,4 +146,5 @@ public class Gun : MonoBehaviourPunCallbacks, IPunObservable
             state = (State)stream.ReceiveNext();
         }
     }
+
 }

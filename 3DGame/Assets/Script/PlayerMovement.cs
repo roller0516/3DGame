@@ -9,15 +9,29 @@ using TMPro;
 
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
+    [Header("AniMation")]
     public Animator ani;
+    [Header("Photon")]
     public PhotonView PV;
+    [Header("UI")]
     public TextMeshProUGUI nickName;
+    [Header("Colider")]
+    public CharacterController characterController;
+    [Header("PlayerStats")]
     public float Speed;
     public float gravity = -9.8f;
+    [Header("Pivot")]
+    public GameObject Weapon;
+    public Transform leftHand;
+    public Transform rightHand;
+    [Header("ThrowItem")]
+    public GameObject[] throwItem;
+
+    private GameObject hasThrowItem;
     private CinemachineTargetGroup cinemachine;
-    public CharacterController characterController;
     private Vector3 moveDirection;
-    Vector3 curPos;
+    private Vector3 curPos;
+
     void Start()
     {
         characterController.GetComponent<CharacterController>();
@@ -27,17 +41,37 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         cinemachine.AddMember(this.transform,1,1);
         gravity = -9.8f;
     }
-
-    
-
     // Start is called before the first frame update
-
 
     // Update is called once per frame
     void Update()
     {
         if (PV.IsMine)
         {
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                ItemManager.instance.SpawnItem("AmmoPack", Vector3.zero, Quaternion.identity);
+            }
+            if (Input.GetKeyDown(KeyCode.Space)) 
+            {
+                ani.SetTrigger("Roll");
+            }
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                CreateThrowItem(throwItem[0]);
+                ani.SetTrigger("Throw");
+                Weapon.transform.SetParent(leftHand);
+            }
+            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+            {
+                ani.SetBool("Run", true);
+                Speed = 5;
+            }
+            else 
+            {
+                ani.SetBool("Run", false);
+                Speed = 3;
+            }
 
             float axisX = Input.GetAxis("Horizontal");
             float axisZ = Input.GetAxis("Vertical");
@@ -58,16 +92,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         }
         else if ((transform.position - curPos).sqrMagnitude >= 100) transform.position = curPos;
         else transform.position = Vector3.Lerp(transform.position, curPos, Time.deltaTime * 10);
-    }
-    void Run() 
-    {
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            Speed = 5;
-            ani.SetBool("Run", true);
-        }
-        else
-            ani.SetBool("Run", false);
     }
     void Rotate() 
     {
@@ -91,5 +115,18 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         {
             curPos = (Vector3)stream.ReceiveNext();
         }
+    }
+    void CreateThrowItem(GameObject prefab) 
+    {
+        hasThrowItem = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+    }
+    public void Throw() 
+    {
+        hasThrowItem.GetComponent<ThrowItem>().ReleaseMe();
+        hasThrowItem = null;
+    }
+    public void SetRightHand() 
+    {
+        Weapon.transform.SetParent(rightHand);
     }
 }

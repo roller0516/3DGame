@@ -10,7 +10,10 @@ public class PlayerShooter : MonoBehaviour
     public Transform gunPivot;
     public Transform leftHandMount;
     public Transform rightHandMount;
+    PlayerMovement playermove;
     PhotonView PV;
+
+    bool reload;
 
     Animator ani;
     // Start is called before the first frame update
@@ -18,6 +21,7 @@ public class PlayerShooter : MonoBehaviour
     {
         ani = GetComponent<Animator>();
         PV = GetComponent<PhotonView>();
+        playermove = GetComponent<PlayerMovement>();
     }
     private void OnEnable()
     {
@@ -32,11 +36,32 @@ public class PlayerShooter : MonoBehaviour
     {
         if (PV.IsMine) 
         {
+            ani.SetBool("Reloading", reload);
             if (Input.GetMouseButton(0))
+            {
                 gun.Fire();
-            else if (Input.GetKeyDown(KeyCode.R))
-                if (gun.Reload())
-                    ani.SetBool("Reloading", true);
+                ani.SetBool("Run", false);
+                if(gun.magAmmo > 0)
+                    ani.SetTrigger("Shoot");
+            }
+            else if (Input.GetKeyDown(KeyCode.R)) 
+            {
+                reload = true;
+                gun.Reload();
+                StartCoroutine(Reloading()); 
+                playermove.SetRightHand();
+            }
         }
+    }
+    IEnumerator Reloading() 
+    {
+        while (ani.GetCurrentAnimatorStateInfo(1).normalizedTime < 1) 
+        {
+            yield return null;
+        }
+
+        reload = false;
+        //yield return new WaitForSeconds(reloadTime);
+        //ani.SetBool("Reloading", false);
     }
 }

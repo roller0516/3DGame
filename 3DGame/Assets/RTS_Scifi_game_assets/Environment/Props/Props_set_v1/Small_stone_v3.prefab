@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 64370174774159852}
   m_Layer: 0
   m_Name: Small_stone_v3
-  m_TagString: Untagged
+  m_TagString: Environment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6152933509047781289}
   m_LocalRotation: {x: 0.026234878, y: 0.06128311, z: -0.028826322, w: -0.9973591}
-  m_LocalPosition: {x: 0.4821465, y: 0.9923903, z: 0.023124563}
+  m_LocalPosition: {x: 0.479, y: 1.047, z: 0.02}
   m_LocalScale: {x: 1.0000008, y: 1.0000004, z: 1.0000008}
   m_Children:
   - {fileID: 6152933509047759045}
@@ -227,9 +227,6 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 1
     Name: Aiming
-  - Type: 4
-    SynchronizeType: 1
-    Name: Dead
   - Type: 9
     SynchronizeType: 1
     Name: Use
@@ -248,6 +245,15 @@ MonoBehaviour:
   - Type: 9
     SynchronizeType: 1
     Name: Pickup
+  - Type: 9
+    SynchronizeType: 0
+    Name: Die
+  - Type: 4
+    SynchronizeType: 0
+    Name: Run
+  - Type: 9
+    SynchronizeType: 0
+    Name: Throw
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
@@ -290,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fc6a171de0525468dc774b3c79da30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TEST: {fileID: 0}
+  supportItem: {fileID: 0}
   ani: {fileID: 6152933509057239923}
   PV: {fileID: 5094040293141262442}
   nickName: {fileID: 0}
@@ -326,6 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHp: 100
+  hpSlider: {fileID: 0}
 --- !u!114 &3607928764348543259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -497,8 +504,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6152933509047810473}
-  m_LocalRotation: {x: 0.70710665, y: 9.3081043e-10, z: -0.0000000029009593, w: 0.70710695}
-  m_LocalPosition: {x: -2.248772e-10, y: 1.0405541e-10, z: -0.0000000018460904}
+  m_LocalRotation: {x: 0.70710665, y: 0.0000000037252903, z: -0.0000000016880222, w: 0.70710695}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6152933509047682391}
@@ -898,7 +905,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireTransform: {fileID: 6152933509047721845}
-  muzzleFlashEffect: {fileID: 0}
+  shotEffect: {fileID: 0}
   damage: 20
   ammoRemain: 100
   magCapacity: 25

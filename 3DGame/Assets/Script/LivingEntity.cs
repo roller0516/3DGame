@@ -17,10 +17,16 @@ public class LivingEntity : MonoBehaviourPunCallbacks,IDamageable
         dead = false;
         hp = MaxHp;
     }
-
+    [PunRPC]
     public virtual void OnDamage(float damage, Vector3 hitPoint, Vector3 hitNormal)
     {
         hp -= damage;
+        //if (PhotonNetwork.IsMasterClient) 
+        //{
+        //    
+        //    //photonView.RPC("OnDamage", RpcTarget.Others, damage, hitPoint, hitNormal);
+        //}
+        
         if (hp <= 0 && !dead)
             Die();
     }

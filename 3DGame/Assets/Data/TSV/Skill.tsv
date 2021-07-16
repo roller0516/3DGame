@@ -1,0 +1,5 @@
+index(int)	name(string)	command1(string)	command2(string)	command3(string)	command4(string)	command5(string)	command6(string)	command7(string)
+0	ammo	up						
+1	terret	up	up					
+2	veicle	up	up	up				
+3	Gun	up	up	up	up	down	down	down
