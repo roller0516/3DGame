@@ -36,6 +36,8 @@ public class PlayerShooter : MonoBehaviour
     {
         if (PV.IsMine) 
         {
+            if (playermove.playerStats == playerStats.roll || playermove.playerStats == playerStats.run)
+                return;
             ani.SetBool("Reloading", reload);
             if (Input.GetMouseButton(0))
             {

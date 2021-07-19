@@ -27,5 +27,6 @@ public class ThrowItem : MonoBehaviour
         transform.parent = null;
         rigidbody.useGravity = true;
         rigidbody.AddForce(forward.forward * 10000);
+        rigidbody.AddForce(forward.up * 10000);
     }
 }

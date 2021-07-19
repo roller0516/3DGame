@@ -7,6 +7,12 @@ using Photon.Realtime;
 using Cinemachine;
 using TMPro;
 
+public enum playerStats 
+{
+    idle,
+    run,
+    roll
+}
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
     [Header("AniMation")]
@@ -19,8 +25,9 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     public CharacterController characterController;
     [Header("PlayerStats")]
     public float Speed;
-    public float gravity = -9.8f;
-    [Header("Pivot")]
+    public float gravity = 9.8f;
+    public playerStats playerStats;
+    [Header("WeaPonPivot")]
     public GameObject Weapon;
     public Transform leftHand;
     public Transform rightHand;
@@ -31,6 +38,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     private CinemachineTargetGroup cinemachine;
     private Vector3 moveDirection;
     private Vector3 curPos;
+    private Vector3 rolldir;
+
 
     void Start()
     {
@@ -39,72 +48,67 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         nickName.color = PV.IsMine ? Color.green : Color.red;
         cinemachine = GameObject.Find("CM TargetGroup1").GetComponent<CinemachineTargetGroup>();
         cinemachine.AddMember(this.transform,1,1);
-        gravity = -9.8f;
+        gravity = 9.8f;
     }
-    // Start is called before the first frame update
 
-    // Update is called once per frame
     void Update()
     {
         if (PV.IsMine)
         {
+            float axisX = Input.GetAxis("Horizontal");
+            float axisZ = Input.GetAxis("Vertical");
+
+            if (characterController.isGrounded == false)
+            {
+                moveDirection.y -= gravity * Time.deltaTime;
+            }
+           
+            moveDirection = new Vector3(axisX * Time.deltaTime * Speed, moveDirection.y, axisZ * Time.deltaTime * Speed);
+
+            characterController.Move(moveDirection);
+            
+            if (Input.GetKeyDown(KeyCode.Space)&& playerStats != playerStats.roll)
+            {
+                transform.eulerAngles = Vector3.up * Mathf.Atan2(moveDirection.x, moveDirection.z)* Mathf.Rad2Deg;
+                Roll();
+
+            }
+
+            ani.SetFloat("X", axisX);
+            ani.SetFloat("Y", axisZ);
+
             if (Input.GetKeyDown(KeyCode.B))
             {
                 ItemManager.instance.SpawnItem("AmmoPack", Vector3.zero, Quaternion.identity);
             }
-            if (Input.GetKeyDown(KeyCode.Space)) 
-            {
-                ani.SetTrigger("Roll");
-            }
+
             if (Input.GetKeyDown(KeyCode.G))
             {
                 CreateThrowItem(throwItem[0]);
                 ani.SetTrigger("Throw");
                 Weapon.transform.SetParent(leftHand);
             }
-            if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.W))
+
+            if (Input.GetKey(KeyCode.LeftShift))
             {
+                playerStats = playerStats.run;
+                transform.eulerAngles = Vector3.up * Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
                 ani.SetBool("Run", true);
                 Speed = 5;
             }
-            else 
+            else if(playerStats != playerStats.roll)
             {
+                playerStats = playerStats.idle;
                 ani.SetBool("Run", false);
                 Speed = 3;
             }
-
-            float axisX = Input.GetAxis("Horizontal");
-            float axisZ = Input.GetAxis("Vertical");
-
-            if (characterController.isGrounded == false) 
-            {
-                moveDirection.y += gravity * Time.deltaTime;
-            }
-
-            moveDirection = new Vector3(axisX * Time.deltaTime * Speed, moveDirection.y, axisZ * Time.deltaTime * Speed);
-
-            characterController.Move(moveDirection);
-
-            ani.SetFloat("X", axisX);
-            ani.SetFloat("Y", axisZ);
 
             Rotate();
         }
         else if ((transform.position - curPos).sqrMagnitude >= 100) transform.position = curPos;
         else transform.position = Vector3.Lerp(transform.position, curPos, Time.deltaTime * 10);
     }
-    void Rotate() 
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane ground = new Plane(Vector3.up,transform.position);
-        float distance;
-
-        if (ground.Raycast(ray, out distance)) 
-        {
-            Vector3 point = ray.GetPoint(distance);
-            transform.LookAt(new Vector3(point.x,transform.position.y,point.z));
-        }
-    }
+   
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if (stream.IsWriting)
@@ -114,6 +118,20 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
         else 
         {
             curPos = (Vector3)stream.ReceiveNext();
+        }
+    }
+    void Rotate()
+    {
+        if (playerStats == playerStats.roll || playerStats == playerStats.run)
+            return;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        Plane ground = new Plane(Vector3.up, transform.position);
+        float distance;
+
+        if (ground.Raycast(ray, out distance))
+        {
+            Vector3 point = ray.GetPoint(distance);
+            transform.LookAt(new Vector3(point.x, transform.position.y, point.z));
         }
     }
     void CreateThrowItem(GameObject prefab) 
@@ -129,4 +147,17 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     {
         Weapon.transform.SetParent(rightHand);
     }
+    void Roll() 
+    {
+        playerStats = playerStats.roll; 
+        ani.SetTrigger("Roll");
+        Speed *= 1.2f;
+        Invoke("RollEnd",1.0f);
+    }
+    void RollEnd() 
+    {
+        playerStats = playerStats.idle;
+        rolldir = Vector3.zero;
+    }
+
 }
