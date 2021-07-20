@@ -38,9 +38,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     private CinemachineTargetGroup cinemachine;
     private Vector3 moveDirection;
     private Vector3 curPos;
-    private Vector3 rolldir;
-
-
     void Start()
     {
         characterController.GetComponent<CharacterController>();
@@ -85,6 +82,13 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             if (Input.GetKeyDown(KeyCode.G))
             {
                 CreateThrowItem(throwItem[0]);
+                ani.SetTrigger("Throw");
+                Weapon.transform.SetParent(leftHand);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                CreateThrowItem(throwItem[1]);
                 ani.SetTrigger("Throw");
                 Weapon.transform.SetParent(leftHand);
             }
@@ -157,7 +161,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     void RollEnd() 
     {
         playerStats = playerStats.idle;
-        rolldir = Vector3.zero;
     }
 
 }

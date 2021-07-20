@@ -10,8 +10,8 @@ public class PlayerShooter : MonoBehaviour
     public Transform gunPivot;
     public Transform leftHandMount;
     public Transform rightHandMount;
-    PlayerMovement playermove;
-    PhotonView PV;
+    private PlayerMovement playermove;
+    private PhotonView PV;
 
     bool reload;
 

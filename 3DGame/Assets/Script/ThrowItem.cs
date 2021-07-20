@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ThrowItem : MonoBehaviour
 {
-    Transform forward;
-    Transform parent;
-    Rigidbody rigidbody;
+    private Transform forward;
+    private Transform parent;
+    private Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,10 @@ public class ThrowItem : MonoBehaviour
         rigidbody.useGravity = false;
         transform.localPosition = new Vector3(0, 0, 0);
     }
-
+    void Update() 
+    {
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+    }
     // Update is called once per frame
     public void ReleaseMe() 
     {

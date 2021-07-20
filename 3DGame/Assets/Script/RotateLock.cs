@@ -7,10 +7,6 @@ public class RotateLock : MonoBehaviour
     // Start is called before the first frame update
     public GameObject target;
     public Vector3 v;
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

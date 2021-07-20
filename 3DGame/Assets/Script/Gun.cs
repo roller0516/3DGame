@@ -25,7 +25,7 @@ public class Gun : MonoBehaviourPunCallbacks, IPunObservable
     public float timeBetFire = 0.12f; // 탄알 발사 간격
     public float reloadTime = 1.8f; // 재장전 소요 시간
     private float lastFireTime;
-
+    
     private void Awake()
     {
         //bulletLineRenderer = GetComponent<LineRenderer>();

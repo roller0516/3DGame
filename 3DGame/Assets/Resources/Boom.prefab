@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4785031288087635574}
   - component: {fileID: 4917061695532499655}
   - component: {fileID: 510166888960487819}
-  - component: {fileID: 4973636545854211471}
+  - component: {fileID: 9003632059963150246}
   m_Layer: 0
   m_Name: Boom
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &510166888960487819
 MonoBehaviour:
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0493c1b95538e074fa17f7f567a0163d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4973636545854211471
+--- !u!114 &9003632059963150246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,8 +135,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4075377120897689455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06e48b9dbb9dea2408d940c7dcd96e54, type: 3}
+  m_Script: {fileID: 11500000, guid: e6bd39f1874ae034290c45ef2ed7daa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 100
   boomParticle: {fileID: 902507130041485953, guid: bfd568afce7e93545bcbf8ab306a0860, type: 3}
   collider: {fileID: 1019887495333931625, guid: bfd568afce7e93545bcbf8ab306a0860, type: 3}
