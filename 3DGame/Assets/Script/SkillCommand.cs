@@ -9,92 +9,93 @@ public class skillInfo
 {
     public string name;
     public Image[] keyImage;
-    public bool isKeyDown;
+    public int maxCombo;
+    public int curCombo;
+    public bool skillDown;
 }
 
 public class SkillCommand : MonoBehaviour
 {
-    GameData gamedata = new GameData();
+    private GameData gamedata = new GameData();
     [SerializeField]
-    List<skillInfo> skillInfo = new List<skillInfo>();
+    private List<skillInfo> skillInfo = new List<skillInfo>();
     [SerializeField]
-    Image ImagePreb;
-    GunPanelUI gunPanel;
-    int count;
+    private Image ImagePreb;
+    private GunPanelUI gunPanel;
+    private int count;
+    private int open;
+    private PlayerMovement playerMovement;
     void Start()
     {
         gunPanel = GameObject.Find("Boarder").GetComponent<GunPanelUI>();
-        for (int i = 0; i < gamedata.Skill.Count; i++) 
-        {
-            skillInfo skill = new skillInfo();
-
-            skill.keyImage = new Image[7];
-
-            for (int j = 0; j < 7; j++) 
-            {
-                skill.keyImage[j] = Instantiate(ImagePreb,GameObject.Find("CommnadPanel").transform);
-
-                if (j == 0)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command1);
-                if (j == 1)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command2);
-                if (j == 2)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command3);
-                if (j == 3)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command4);
-                if (j == 4)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command5);
-                if (j == 5)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command6);
-                if (j == 6)
-                    skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command7);
-            }
-            skillInfo.Add(skill);
-        }
+        playerMovement = GetComponent<PlayerMovement>();
+        DataSetting();
     }
+
     private void Update()
     {
-        if (!gunPanel.skillOn) return;
-        for (int i = 0; i < gamedata.Skill.Count; i++)
+        if (!gunPanel.skillOn)
         {
-            if (Input.GetKey(gamedata.Skill[i].command1) && count == 0) 
+            open = 0;
+            for (int i = 0; i < skillInfo.Count; i++)
+            {
+                skillInfo[i].skillDown = false;
+            }
+            return;
+        }
+        else if (gunPanel.skillOn && open == 0) 
+        {
+            for (int i = 0; i < skillInfo.Count; i++)
+            {
+                skillInfo[i].skillDown = true;
+                open++;
+            }
+        }
+            
+        if (Input.GetKeyDown(KeyCode.W))
+            UseSkill("w");
+        if (Input.GetKeyDown(KeyCode.A))
+            UseSkill("a");
+        if (Input.GetKeyDown(KeyCode.S))
+            UseSkill("s");
+        if (Input.GetKeyDown(KeyCode.D))
+            UseSkill("d");
+    }
+    void UseSkill(string key) 
+    {
+        for (int i = 0; i < skillInfo.Count; i++) 
+        {
+            if (skillInfo[i].skillDown == false) continue;
+            if (count > skillInfo[i].keyImage.Length) continue;
+            if (skillInfo[i].keyImage[count].sprite == null) continue;
+            if (skillInfo[i].keyImage[count].sprite.name == key)
             {
                 skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-                count++;
+                skillInfo[i].curCombo++;
             }
-            //if (Input.GetKey(gamedata.Skill[i].command2) && count == 1)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count++;
-            //}
-            //if (Input.GetKey(gamedata.Skill[i].command3) && count == 2)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count++;
-            //}
-            //if (Input.GetKey(gamedata.Skill[i].command4) && count == 3)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count++;
-            //}
-            //if (Input.GetKey(gamedata.Skill[i].command5) && count == 4)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count++;
-            //}
-            //if (Input.GetKey(gamedata.Skill[i].command6) && count == 5)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count++;
-            //}
-            //if (Input.GetKey(gamedata.Skill[i].command7) && count == 6)
-            //{
-            //    skillInfo[i].keyImage[count].color = new Color(255, 255, 0);
-            //    count = 0;
-            //}
-        }
-    }
+            else if (skillInfo[i].keyImage[count].sprite.name != key)
+            {
+                closeSkill(i);
+            }
 
+            if (skillInfo[i].curCombo == skillInfo[i].maxCombo) //º“»Ø
+            {
+                playerMovement.CreateThrowItem(playerMovement.throwItem[1]);
+                StartCoroutine(spawnItem(i));
+                count = 0;
+            }
+        }
+        count++;
+    }
+    
+    void closeSkill(int spellNum)
+    {
+        for (int i = 0; i < skillInfo[spellNum].maxCombo; i++)
+        {
+            skillInfo[spellNum].keyImage[i].color = new Color(50, 50, 50);
+        }
+        skillInfo[spellNum].skillDown = false;
+    }
     Sprite SetSprite(string spriteName) 
     {
         Sprite im;
@@ -106,5 +107,101 @@ public class SkillCommand : MonoBehaviour
         }
         return null;
     }
+    void DataSetting()
+    {
+        for (int i = 0; i < gamedata.Skill.Count; i++)
+        {
+            skillInfo skill = new skillInfo();
 
+            skill.keyImage = new Image[7];
+            skill.name = gamedata.Skill[i].name;
+            for (int j = 0; j < 7; j++)
+            {
+                skill.keyImage[j] = Instantiate(ImagePreb, GameObject.Find("CommnadPanel").transform);
+                
+                switch (j)
+                {
+                    case 0:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command1);
+                        if (gamedata.Skill[i].command1 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 1:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command2);
+                        if (gamedata.Skill[i].command2 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 2:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command3);
+                        if (gamedata.Skill[i].command3 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 3:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command4);
+                        if (gamedata.Skill[i].command4 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 4:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command5);
+                        if (gamedata.Skill[i].command5 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 5:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command6);
+                        if (gamedata.Skill[i].command6 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                    case 6:
+                        skill.keyImage[j].sprite = SetSprite(gamedata.Skill[i].command7);
+                        if (gamedata.Skill[i].command7 == "")
+                        {
+                            skill.keyImage[j].color = new Color(0, 0, 0, 0);
+                            continue;
+                        }
+                        else
+                            skill.maxCombo++;
+                        break;
+                }
+            }
+            skillInfo.Add(skill);
+        }
+    }
+
+    IEnumerator spawnItem(int index) 
+    {
+        GameObject item = playerMovement.HasThrowItem;
+        yield return new WaitForSeconds(3.0f);
+        Vector3 v = new Vector3(item.transform.position.x, item.transform.position.y + 20, item.transform.position.z);
+        ItemManager.instance.SpawnItem(skillInfo[index].name,v, Quaternion.identity);
+    }
 }

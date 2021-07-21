@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7597999823280811756}
   - component: {fileID: 1826089685289562169}
   - component: {fileID: -8183568392709607949}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Arachnid
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -186,6 +186,7 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7597999823280811756}
+  - {fileID: -8183568392709607949}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -214,7 +215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4896983552406010}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4083514237874894}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg2Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +276,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4891388064145694}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone004Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +306,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4958494410079928}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg3Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4557810634707376}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4022475576542374}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4663144358054716}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4953751903790420}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4946297397270020}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +491,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4583879941235382}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -520,7 +521,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4835687892455448}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -551,7 +552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4975248017314856}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail4 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -582,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4056921846385746}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -612,7 +613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561693719810676}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4808185976012966}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -686,7 +687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4407770932193112}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4632211098378818}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg1Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -746,7 +747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4120512188180224}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail5 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,7 +777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4779182687173228}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail3 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -807,7 +808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755806133998982}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg4Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -837,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4112047692361246}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -868,7 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4330277388501054}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -899,7 +900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4320846940892360}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4868777800602512}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -961,7 +962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4373738432844414}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg1Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -991,7 +992,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4205910609035394}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1022,7 +1023,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4881602064818568}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1054,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4454700719254592}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1083,7 +1084,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4444302563080348}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegPlatform001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1113,7 +1114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4152776303353982}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone002Bone001Bone001 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1144,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028388143559114}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4382867003432990}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1204,7 +1205,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4821226586099376}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1234,7 +1235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4503410362469742}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1265,7 +1266,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4068108014993598}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1295,7 +1296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4328258661138962}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1325,7 +1326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4720103280859794}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1356,7 +1357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4012598311390974}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1386,7 +1387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4125739244442460}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone002Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1417,7 +1418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4921743322675568}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1448,7 +1449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4933409154973532}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegPlatform002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,7 +1479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4316174377107840}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1509,7 +1510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4863472277222080}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg3Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1539,7 +1540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4813163860742988}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1569,7 +1570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4304140958747556}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1600,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4349195131535884}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1630,7 +1631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4162634004089188}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4414973214615570}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1693,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4384122790793898}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1722,7 +1723,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000777523606678}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1753,7 +1754,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4185415163451330}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail5 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4087134509428396}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1814,7 +1815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4591699793699504}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1845,7 +1846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4035580996622196}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg4Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1875,7 +1876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4755534507551132}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegAnkle002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1905,7 +1906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4436110390844950}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegAnkle001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,7 +1936,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376383842819140}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegAnkle002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1965,7 +1966,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4114595955284442}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1996,7 +1997,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4034424247369582}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2027,7 +2028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4483134228764262}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,7 +2059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4202194217699972}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2089,7 +2090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4809412224490932}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001Hub
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2130,7 +2131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342059444447736}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2161,7 +2162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4836704890790244}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4325212163552168}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2222,7 +2223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4550670595206416}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone002Bone001 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2253,7 +2254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4782224373084974}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg2Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2283,7 +2284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4590304992394954}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2314,7 +2315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4244214367944280}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2344,7 +2345,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4828049530912888}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2375,7 +2376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4968092838670812}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLegPlatform001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2405,7 +2406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4044835588370494}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2436,7 +2437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4781569330819454}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigHub001Bone002Bone001Bone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2466,7 +2467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4289102642561732}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001LLeg32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2497,7 +2498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4276935290300494}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegAnkle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2528,7 +2529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4134758437640264}
   - component: {fileID: 137118633511142840}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Low_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4264357728742574}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4487025001990816}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail3 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2716,7 +2717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4490513674653456}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail4 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2747,7 +2748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4923229905600096}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2777,7 +2778,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4256659974371114}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086811384934716}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegAnkle001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2838,7 +2839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4509963411703366}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2868,7 +2869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4347867963179888}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigTail2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2899,7 +2900,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4749032374606564}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Character001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2929,7 +2930,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4238424869858744}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigRLeg006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2960,7 +2961,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4978919774836856}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2990,7 +2991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4336113195994476}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Spider001RLeg13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3020,7 +3021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4074521176610142}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: CATRigLLegPlatform002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

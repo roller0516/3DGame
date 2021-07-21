@@ -38,6 +38,9 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     private CinemachineTargetGroup cinemachine;
     private Vector3 moveDirection;
     private Vector3 curPos;
+
+    public GameObject HasThrowItem { get => hasThrowItem; set => hasThrowItem = value; }
+
     void Start()
     {
         characterController.GetComponent<CharacterController>();
@@ -82,15 +85,6 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             if (Input.GetKeyDown(KeyCode.G))
             {
                 CreateThrowItem(throwItem[0]);
-                ani.SetTrigger("Throw");
-                Weapon.transform.SetParent(leftHand);
-            }
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                CreateThrowItem(throwItem[1]);
-                ani.SetTrigger("Throw");
-                Weapon.transform.SetParent(leftHand);
             }
 
             if (Input.GetKey(KeyCode.LeftShift))
@@ -138,14 +132,16 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             transform.LookAt(new Vector3(point.x, transform.position.y, point.z));
         }
     }
-    void CreateThrowItem(GameObject prefab) 
+    public void CreateThrowItem(GameObject prefab) 
     {
-        hasThrowItem = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+        HasThrowItem = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+        ani.SetTrigger("Throw");
+        Weapon.transform.SetParent(leftHand);
     }
     public void Throw() 
     {
-        hasThrowItem.GetComponent<ThrowItem>().ReleaseMe();
-        hasThrowItem = null;
+        HasThrowItem.GetComponent<ThrowItem>().ReleaseMe();
+        HasThrowItem = null;
     }
     public void SetRightHand() 
     {

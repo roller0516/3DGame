@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Data;
 
 [Serializable]
 public struct itemObjInfo
@@ -12,6 +13,7 @@ public struct itemObjInfo
 
 public class ItemManager : MonoBehaviour
 {
+    GameData gamedata = new GameData();
     public static ItemManager instance;
     [SerializeField]
     List<itemObjInfo> iteminfo = new List<itemObjInfo>();
@@ -25,6 +27,14 @@ public class ItemManager : MonoBehaviour
     }
     private void Start()
     {
+        for (int i = 0; i < gamedata.Skill.Count; i++) 
+        {
+            itemObjInfo item;
+            item.itemName = gamedata.Skill[i].name;
+            item.item = Resources.Load<GameObject>(item.itemName);
+            iteminfo.Add(item);
+        }
+
         for (int i = 0; i < iteminfo.Count; i++) 
         {
             itemList.Add(iteminfo[i].itemName, iteminfo[i].item);

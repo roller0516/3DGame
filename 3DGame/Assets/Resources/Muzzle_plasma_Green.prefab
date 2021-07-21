@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58b77d1dca29af4c980b8c7141cb7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 1198842533376840089, guid: 21a603a9f38221242896a3bcf24694d4, type: 3}
   hitParticle: {fileID: 198136990870749590, guid: 973919c32ce90774d893e559c8758d70, type: 3}
 --- !u!1 &8719772490167134684
 GameObject:
@@ -25,7 +26,7 @@ GameObject:
   - component: {fileID: 8916751164595268850}
   - component: {fileID: 8918520391769425610}
   m_Layer: 0
-  m_Name: Muzzle_plasma
+  m_Name: Muzzle_plasma_Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14365,7 +14366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4455315919127227727, guid: 65d9351bca513fb43985a794d5f63508, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 64
+      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 4455315919127227727, guid: 65d9351bca513fb43985a794d5f63508, type: 3}
       propertyPath: CollisionModule.collidesWithDynamic

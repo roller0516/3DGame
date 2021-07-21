@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class particleCollison : MonoBehaviour
 {
-    Gun gun;
+    public GameObject owner;
+    float damage;
     public ParticleSystem hitParticle;
     private void Start()
     {
-        gun = GameObject.Find("ShootFX").GetComponent<Gun>();
+        if(owner.tag == "Player")
+            damage = GameObject.Find("ShootFX").GetComponent<Gun>().damage;
+        if (owner.tag == "Turret")
+            damage = owner.GetComponent<Turret>().damage;
     }
     private void OnParticleCollision(GameObject other)
     {
@@ -20,14 +24,15 @@ public class particleCollison : MonoBehaviour
             Vector3 hitNormal = transform.position - other.transform.position;
             if (target != null)
             {
-                target.OnDamage(gun.damage, hitPoint, hitNormal);
+                target.OnDamage(damage, hitPoint, hitNormal);
             }
         }
         else if (other.tag == "Environment") 
         {
             if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
             {
-                Instantiate(hitParticle, hit.point, transform.rotation);
+                if(hitParticle)
+                    Instantiate(hitParticle, hit.point, transform.rotation);
             }
         }
         gameObject.SetActive(false);

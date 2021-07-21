@@ -1,5 +1,5 @@
 index(int)	name(string)	command1(string)	command2(string)	command3(string)	command4(string)	command5(string)	command6(string)	command7(string)
-0	ammo	w						
-1	terret	w	w					
-2	veicle	w	w	w				
-3	Gun	w	w	w	w	s	s	s
+0	AmmoPack	w	s					
+1	Turret	a	w					
+2	Vehicle	d	w	w				
+3	Mechanic	s	w	w	w	s	s	s

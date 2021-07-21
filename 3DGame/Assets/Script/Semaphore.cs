@@ -7,7 +7,6 @@ public class Semaphore : MonoBehaviour
 {
     // Start is called before the first frame update
 
-
     public GameObject lineGameObject;
 
     private void OnCollisionEnter(Collision collision)
@@ -22,5 +21,7 @@ public class Semaphore : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         lineGameObject.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        gameObject.SetActive(false);
     }
 }

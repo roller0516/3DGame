@@ -95,7 +95,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 7.6814775, y: 7.570001, z: 0.28300798}
-  m_Center: {x: -0.023097098, y: 5.3703642e-15, z: 0.4315035}
+  m_Center: {x: -0.023097098, y: 5.3703642e-15, z: 0.13}
 --- !u!1 &1204013810180738
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,7 +608,7 @@ GameObject:
   - component: {fileID: 111986913927268826}
   - component: {fileID: 1774865255295341038}
   m_Layer: 0
-  m_Name: Structure_v5_blue
+  m_Name: AmmoPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
