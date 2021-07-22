@@ -166,6 +166,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4783380826031320}
     m_Modifications:
+    - target: {fileID: 1019887495333931625, guid: bfd568afce7e93545bcbf8ab306a0860, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1027364151390637257, guid: bfd568afce7e93545bcbf8ab306a0860, type: 3}
       propertyPath: m_Name
       value: Explosion

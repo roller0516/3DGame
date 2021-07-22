@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58b77d1dca29af4c980b8c7141cb7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 1198842533376840089, guid: 21a603a9f38221242896a3bcf24694d4, type: 3}
+  owner: {fileID: 3948026154478005422, guid: beb8fbd7df1cf7e49bda0d147ab574d4, type: 3}
   hitParticle: {fileID: 198136990870749590, guid: 973919c32ce90774d893e559c8758d70, type: 3}
 --- !u!1 &8719772490167134684
 GameObject:

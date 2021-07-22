@@ -9,7 +9,14 @@ public class particleCollison : MonoBehaviour
     public ParticleSystem hitParticle;
     private void Start()
     {
-        if(owner.tag == "Player")
+        if (owner.tag == "Mechanic") 
+        {
+            if (owner.GetComponent<Mechanic>().bullet[0])
+                damage = owner.GetComponent<Mechanic>().normaldamage;
+            else
+                damage = owner.GetComponent<Mechanic>().missiledamage;
+        }
+        if (owner.tag == "Player")
             damage = GameObject.Find("ShootFX").GetComponent<Gun>().damage;
         if (owner.tag == "Turret")
             damage = owner.GetComponent<Turret>().damage;

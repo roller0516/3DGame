@@ -14,6 +14,7 @@ public class GunPanelUI : MonoBehaviour
     public RectTransform backGroundImage;
     public GameObject commandPanel;
     public GameObject ammoPanel;
+    public GameObject miniMapPanel;
     public bool skillOn;
     private RectTransform curRectTransform;
     private Gun gun;
@@ -29,23 +30,23 @@ public class GunPanelUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftControl))
-        {
-            skillOn = true;
+        if (skillOn)
             StartCoroutine(CommandPanelOn());
-            ammoPanel.SetActive(false);
+        else if(!skillOn)
+            StopCoroutine(CommandPanelOn());
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            StartCoroutine(MiniMapPanelOn());
             BroadOpen();
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftControl)) 
+        if (Input.GetKeyUp(KeyCode.Tab))
         {
-            skillOn = false;
-            StopAllCoroutines();
-            commandPanel.SetActive(false);
-            ammoPanel.SetActive(true);
+            StopCoroutine(MiniMapPanelOn());
+            miniMapPanel.SetActive(false);
             BroadClose();
         }
-
         magazine.text = (gun.ammoRemain / gun.magCapacity).ToString();
         magazineFill.fillAmount =  (float)gun.magAmmo / (float)gun.magCapacity;
     }
@@ -63,23 +64,32 @@ public class GunPanelUI : MonoBehaviour
             boomImage[count].color = color;
         }
     }
-    void BroadOpen() 
+    public void BroadOpen() 
     {
         backGroundImage.DOAnchorPosY(4.563f, 1, false);
         backGroundImage.DOSizeDelta(new Vector2(400, 409.126f),1,false);
+        ammoPanel.SetActive(false);
     }
-    void BroadClose() 
+    public void BroadClose() 
     {
         backGroundImage.DOAnchorPosY(-100, 1, false);
         backGroundImage.DOSizeDelta(new Vector2(400,200), 1, false);
+        ammoPanel.SetActive(true);
     }
 
-    IEnumerator CommandPanelOn() 
+    public IEnumerator CommandPanelOn() 
+    {
+        yield return new WaitForSeconds(0.3f);
+        if(skillOn)
+            commandPanel.SetActive(true);
+    }
+
+    public IEnumerator MiniMapPanelOn()
     {
         yield return new WaitForSeconds(0.3f);
 
-        if(!commandPanel.activeSelf)
-            commandPanel.SetActive(true);
+        if (!miniMapPanel.activeSelf)
+            miniMapPanel.SetActive(true);
     }
 
 }

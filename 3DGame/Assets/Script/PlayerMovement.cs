@@ -11,7 +11,8 @@ public enum playerStats
 {
     idle,
     run,
-    roll
+    roll,
+    useItem
 }
 public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
 {
@@ -71,16 +72,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
             {
                 transform.eulerAngles = Vector3.up * Mathf.Atan2(moveDirection.x, moveDirection.z)* Mathf.Rad2Deg;
                 Roll();
-
             }
 
             ani.SetFloat("X", axisX);
             ani.SetFloat("Y", axisZ);
 
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                ItemManager.instance.SpawnItem("AmmoPack", Vector3.zero, Quaternion.identity);
-            }
 
             if (Input.GetKeyDown(KeyCode.G))
             {
@@ -157,6 +153,11 @@ public class PlayerMovement : MonoBehaviourPunCallbacks, IPunObservable
     void RollEnd() 
     {
         playerStats = playerStats.idle;
+    }
+
+    void UseItem() 
+    {
+
     }
 
 }

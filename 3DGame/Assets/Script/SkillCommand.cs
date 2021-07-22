@@ -34,8 +34,22 @@ public class SkillCommand : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            gunPanel.skillOn = true;
+            gunPanel.BroadOpen();
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            gunPanel.skillOn = false;
+            gunPanel.commandPanel.SetActive(false);
+            gunPanel.BroadClose();
+        }
+
         if (!gunPanel.skillOn)
         {
+            count = 0;
             open = 0;
             for (int i = 0; i < skillInfo.Count; i++)
             {
@@ -82,8 +96,9 @@ public class SkillCommand : MonoBehaviour
             {
                 playerMovement.CreateThrowItem(playerMovement.throwItem[1]);
                 StartCoroutine(spawnItem(i));
-                count = 0;
-            }
+				closeSkill(i);
+				count = 0;
+			}
         }
         count++;
     }
@@ -94,6 +109,7 @@ public class SkillCommand : MonoBehaviour
         {
             skillInfo[spellNum].keyImage[i].color = new Color(50, 50, 50);
         }
+        skillInfo[spellNum].curCombo = 0;
         skillInfo[spellNum].skillDown = false;
     }
     Sprite SetSprite(string spriteName) 
